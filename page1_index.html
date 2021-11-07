@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <title>Contacts</title>
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +17,19 @@
 
 <body>
 
-    <nav>
-        <h1>Contacts</h1>
-        <a href="new_contact.html">Create New Contact +</a>
-        <a href="">Show Favourites</a>
-    </nav>
+    <header>
+        <nav>
+            <h1><a href="page1_index.html" class="nav-home">Contacts</a></h1>
+            <a href="page2_new_contact.html" class="nav-a">Create New Contact +</a>
+            <a href="" class="nav-a">Show Favourites</a>
+        </nav>
+    </header>
+    
 
     <div class="main">
-        <div class="contact">Barry Allen</div>
-        <div class="contact">Beverly Crusher</div>
-        <div class="contact">Diana Prince</div>
+        <div class="contact"><a href="page3_contact_info.html" class="divlink">Barry Allen</a></div>
+        <div class="contact"><p>Beverly Crusher</p></div>
+        <div class="contact"><p>Diana Prince</p></div>
     </div>
 
 </body>
