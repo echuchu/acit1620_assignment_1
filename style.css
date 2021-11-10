@@ -1,27 +1,53 @@
-@media all and (min-width:480px) {
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-family: 'Merriweather Sans', sans-serif;
-    color: #191724;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
+/* Some of the CSS that is common between desktop and mobile */
 
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #232136; /*rose pine moon base*/
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+nav {
+  display: flex;
+  background-color: #9ccfd8; /*rose pine moon foam*/
+}
+
+body {
+  display: flex;
+  background-color:	#e0def4; /*rose pine moon text*/
+}
+
+.contact {
+  display: flex;
+  background-color:	#c4a7e7; /*rose pine moon iris*/
+}
+
+.contact p {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* CSS for desktop */
+
+@media all and (min-width:480px) {
   body {
-    display: flex;
     height: 100%;
     width: 100%;
-    background-color:	#faf4ed;
   }
 
   nav {
-    display: flex;
     flex-direction: column;
     width: 20vw;
     min-height: 100vh;
-    background-color: #9ccfd8;
     position: sticky;
     top: 0px;
     padding-top: 5vh;
@@ -51,13 +77,11 @@
     width: 80vw;
     min-height:100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     padding: 10vh 3.25vw;
   }
 
   .contact {
-    display: flex;
-    background-color:	#c4a7e7;
     width: 15vw;
     height: 15vh;
     border-radius: 20px;
@@ -65,42 +89,18 @@
     align-items: center;
     margin: 1vw 4.5vw;
     }
-
-  .contact p {
-    display: flex;
-    position: relative;
-    width: 90%;
-    height: 90%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-  }
 }
 
-/* Assuming majority of mobile screens are less than 480px wide */
+/* CSS for mobile
+Assuming majority of mobile screens are less than 480px wide */
 @media screen and (max-width: 480px) {
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Merriweather Sans', sans-serif;
-    color: #191724;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  
   body {
-    display: flex;
     flex-direction: column;
-    background-color:	#faf4ed;
-    }
+  }
 
   nav {
-    display: flex;
     width: 100vw;
     height: 10vh;
-    background-color: #9ccfd8;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -132,8 +132,6 @@
   }
   
   .contact {
-    display: flex;
-    background-color:	#c4a7e7;
     width: 70vw;
     height: 25vh;
     border-radius: 20px;
@@ -141,15 +139,4 @@
     align-items: center;
     margin: 2.5vh 10vw;
     }
-  
-  .contact p {
-    display: flex;
-    position: relative;
-    width: 90%;
-    height: 90%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-  }
 }
