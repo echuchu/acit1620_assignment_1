@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <title>Create a New Contact</title>
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,33 @@
 
 <body>
 
-    <nav>
-        <h1>Contacts</h1>
-        <a href="">Create New Contact +</a>
-        <a href="">Show Favourites</a>
-    </nav>
+    <header>
+        <nav>   
+            <h1 class="nav-home">Contacts</h1>
+            <h2 class="nav">Create New Contact +</h2>
+            <h2 class="nav">Show Favourites</h2>
+        </nav>
+    </header>
 
     <div class="main">
-        
+        <div class="contactedit">
+            <div class="contactimg">
+                <img src="./img/profile.jpg" class ="profilepic" alt="Profile picture">
+            </div>
+            <div class="form">
+                <form>
+                    <input type="text" id="contactname" name="contactname" placeholder="Contact Name">
+                    <!-- <input type="button" id="extraphonefield" name="extraphonefield"> -->
+                    <input type="tel" id="contactphone" name="contactphone" placeholder="Contact Phone">
+                    <input type="text" id="contactaddress" name="contactaddress" placeholder="Contact Address">
+                    <input type="email" id="contactemail" name="contactemail" placeholder="Contact Email">
+                    <div class="buttons">
+                        <input type="button" class="button submit" value="Submit">
+                        <input type="button" class="button cancel" value="Cancel">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
 </body>
