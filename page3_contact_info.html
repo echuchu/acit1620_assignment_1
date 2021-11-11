@@ -4,8 +4,8 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Contacts</title>
-    
+    <title>Contact Name</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,28 @@
 
 <body>
 
-    <nav>
-        <h1>Contacts</h1>
-        <a href="new_contact.html">Create New Contact +</a>
-        <a href="">Show Favourites</a>
-    </nav>
+    <header>
+        <nav>   
+            <h1 class="nav-home">Contacts</h1>
+            <h2 class="nav">Create New Contact +</h2>
+            <h2 class="nav">Show Favourites</h2>
+        </nav>
+    </header>
 
     <div class="main">
-        <div></div>
+        <div class="contactinfo">
+            <div class="contactname">
+                Raquel Ervin
+                <img src="./img/profile.jpg" class ="profilepic" alt="Profile picture">
+            </div>
+            <div class="contactemail">email: rocket@gmail.com</div>
+            <div class="contactphone">cell: +1 555 555-5555</div>
+            <div class="contactaddress">address: 123 front st<br>Unit #1<br>Dakota City</div>
+            <div class="buttons">
+                <button class="button edit" value="Edit">Edit</button>
+                <button class="button close" value="Close">Close</button>
+            </div>
+        </div>
     </div>
 
 </body>

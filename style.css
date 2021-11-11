@@ -1,4 +1,5 @@
-/* Some of the CSS that is common between desktop and mobile */
+/* Some of the CSS that is common between desktop and mobile 
+FIXME: CSS folder*/
 
 * {
   margin: 0;
@@ -36,19 +37,31 @@ body {
   overflow-y: auto;
 }
 
-.contactedit{
+.contactedit, .contactinfo {
   width: 25vw;
-  margin: 0vh 1vw;
+  margin: 0 1vw;
   display: flex;
   flex-direction: column;
   min-width: 200px;
   max-width: 300px;
   height: 100%;
+  margin-top: 2.5vh;
 }
 
-.contactimg {
+.contactinfo {
+  /* justify-content: space-around; */
+  row-gap: 5vh;
+}
+
+.contactimg, .contactname {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.contactname {
+  justify-content: space-between;
+  font-size: 1.25rem;
 }
 
 .profilepic {
@@ -56,7 +69,7 @@ body {
   border: 2px solid #393552; /*rose pine moon overlay*/
   opacity: 0.9;
   width: 30%;
-  min-width: 100px;
+  min-width: 80px;
   height: auto;
   object-fit: contain;
 }
@@ -77,7 +90,7 @@ form {
   width: 100%;
 }
 
-input {
+input, button {
   padding: 1vh;
   width: 100%;
   background-color: rgba(196,166,232,0.75); /*rose pine moon iris*/ 
@@ -97,18 +110,20 @@ input {
 .button {
   border-radius: 10px;
   cursor: pointer;
-}
-
-.submit, .cancel {
   width: 40%;
 }
 
-.submit {
-  background-color: #3e8fb0; /*rose pine moon pine*/
+/*FIXME: submit is save contact*/
+.submit, .edit {
+  background-color: rgba(61,143,176,0.8) /*rose pine moon pine #3e8fb0*/
 }
 
 .cancel {
-  background-color: #eb6f92; /*rose pine moon love*/
+  background-color: rgba(235,112,145,0.8); /*rose pine moon love #eb6f92*/
+}
+
+.close {
+  background-color: rgba(130,125,156,0.8); /*rose pine moon subtle #817c9c*/
 }
 
 /* CSS for desktop */
@@ -124,7 +139,7 @@ input {
     width: 20vw;
     min-height: 100vh;
     position: sticky;
-    top: 0px;
+    top: 0;
     padding-top: 5vh;
   }
 
@@ -163,7 +178,7 @@ input {
     justify-content: center;
     align-items: center;
     margin: 1vw 4.5vw;
-    }
+  }
 }
 
 /* CSS for mobile
@@ -177,8 +192,8 @@ Assuming majority of mobile screens are less than 480px wide */
     width: 100vw;
     height: 10vh;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 1;
     align-items: center;
     justify-content: space-around;
@@ -215,5 +230,5 @@ Assuming majority of mobile screens are less than 480px wide */
     justify-content: center;
     align-items: center;
     margin: 2.5vh 10vw;
-    }
+  }
 }
