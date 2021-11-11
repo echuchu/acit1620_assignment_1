@@ -14,6 +14,18 @@ FIXME: CSS folder*/
 nav {
   display: flex;
   background-color: #9ccfd8; /*rose pine moon foam*/
+  top: 0;
+}
+
+nav * {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-home {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1vw;
 }
 
 body {
@@ -21,9 +33,16 @@ body {
   background-color:	#e0def4; /*rose pine moon text*/
 }
 
+.main {
+  display: flex;
+}
+
 .contact {
   display: flex;
   background-color:	#c4a7e7; /*rose pine moon iris*/
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact p {
@@ -49,7 +68,6 @@ body {
 }
 
 .contactinfo {
-  /* justify-content: space-around; */
   row-gap: 5vh;
 }
 
@@ -74,7 +92,7 @@ body {
   object-fit: contain;
 }
 
-.form {
+.form, form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,11 +100,7 @@ body {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
-  height: 100%;
   width: 100%;
 }
 
@@ -110,11 +124,10 @@ input, button {
 .button {
   border-radius: 10px;
   cursor: pointer;
-  width: 40%;
+  margin: 0 1.25vw;
 }
 
-/*FIXME: submit is save contact*/
-.submit, .edit {
+.save, .edit {
   background-color: rgba(61,143,176,0.8) /*rose pine moon pine #3e8fb0*/
 }
 
@@ -139,23 +152,14 @@ input, button {
     width: 20vw;
     min-height: 100vh;
     position: sticky;
-    top: 0;
     padding-top: 5vh;
   }
 
   nav * {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: 8vh;
     padding: 2vw;
-  }
-
-  .nav-home {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-left: 1vw;
   }
 
   .nav {
@@ -166,7 +170,6 @@ input, button {
   .main {
     width: 80vw;
     min-height:100%;
-    display: flex;
     flex-wrap: wrap;
     padding: 10vh 3.25vw;
   }
@@ -174,9 +177,6 @@ input, button {
   .contact {
     width: 15vw;
     height: 15vh;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
     margin: 1vw 4.5vw;
   }
 }
@@ -192,32 +192,21 @@ Assuming majority of mobile screens are less than 480px wide */
     width: 100vw;
     height: 10vh;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1;
     align-items: center;
     justify-content: space-around;
   }
   
   nav * {
-    display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
     width: 30vw;
     height: 100%;
-  }
-
-  .nav-home {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-left: 1vw;
   }
   
   .main {
     margin-top: 10vh;
     padding-top: 2.5vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: 80vh;
@@ -226,9 +215,6 @@ Assuming majority of mobile screens are less than 480px wide */
   .contact {
     width: 70vw;
     height: 25vh;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
     margin: 2.5vh 10vw;
   }
 }
