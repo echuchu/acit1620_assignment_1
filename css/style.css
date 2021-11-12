@@ -1,4 +1,5 @@
-/* Some of the CSS that is common between desktop and mobile */
+/* CSS that is common between mobile and desktop
+ mobile specific CSS specified for my own clarity*/
 
 * {
   margin: 0;
@@ -14,11 +15,28 @@ nav {
   display: flex;
   background-color: #9ccfd8; /*rose pine moon foam*/
   top: 0;
+  /*mobile css below: */
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*mobile css*/
+nav * {
+  flex-grow: 1;
 }
 
 nav > h1,h2 {
   display: flex;
   justify-content: center;
+  /*mobile css below: */
+  text-align: center;
+  align-items: center;
+  width: 30vw;
+  height: 100%;
 }
 
 .nav-home {
@@ -32,10 +50,18 @@ a {
 body {
   display: flex;
   background-color: rgba(224,222,245,0.6)	; /*rose pine moon text #e0def4*/
+  /*mobile css below: */
+  flex-direction: column;
 }
 
 div.main {
   display: flex;
+  /*mobile css below: */
+  margin-top: 10vh;
+  padding-top: 2.5vh;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
 }
 
 div.contact {
@@ -44,6 +70,10 @@ div.contact {
   border-radius: 20px;
   justify-content: center;
   align-items: center;
+  /*mobile css below: */
+  width: 70vw;
+  height: 25vh;
+  margin: 2.5vh 10vw;
 }
 
 div.contact p {
@@ -160,52 +190,12 @@ button.extrafield {
   color: transparent;
 }
 
-/* CSS for mobile
-Assuming majority of mobile screens are less than 480px wide */
-@media screen and (max-width: 480px) {
-  body {
-    flex-direction: column;
-  }
-
-  nav {
-    width: 100vw;
-    height: 10vh;
-    position: fixed;
-    z-index: 1;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-nav * {
-  flex-grow: 1;
-}
-
-  nav > h1,h2 {
-    text-align: center;
-    align-items: center;
-    width: 30vw;
-    height: 100%;
-  }
-  
-  div.main {
-    margin-top: 10vh;
-    padding-top: 2.5vh;
-    flex-direction: column;
-    align-items: center;
-    height: 80vh;
-  }
-  
-  div.contact {
-    width: 70vw;
-    height: 25vh;
-    margin: 2.5vh 10vw;
-  }
-}
-
-/* CSS for desktop */
+/* CSS for desktop, assumed mobile device width <480px
+ notes on desktop vs mobile css left for myself*/
 
 @media all and (min-width:480px) {
   body {
+    flex-direction: row; /*overwrite mobile*/
     height: 100%;
     width: 100%;
   }
@@ -216,6 +206,14 @@ nav * {
     min-height: 100vh;
     position: sticky;
     padding-top: 5vh;
+    /*reset from mobile: */
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  /*overwrite mobile*/
+  nav * {
+    flex-grow: initial;
   }
 
   nav > h1,h2 {
@@ -223,6 +221,9 @@ nav * {
     width: 100%;
     height: 8vh;
     padding: 2vw;
+    /*overwrite mobile: */
+    text-align: initial;
+    align-items: initial;
   }
 
   .nav {
@@ -235,6 +236,10 @@ nav * {
     min-height:100%;
     flex-wrap: wrap;
     padding: 10vh 3.25vw;
+    /*overwrite mobile: */
+    flex-direction: row;
+    margin-top: 0;
+    align-items: initial;
   }
 
   div.contact {
